@@ -1,7 +1,15 @@
 /**
- * Insert new admin in db
+ * Test comment
+ */
+export const testRoute = (req, res) => {
+  res.send("coucou");
+};
+
+/**
+ * Test comment2
  * @param {}
  */
-export const testRoute = async (req, res) => {
-  res.send("<h1>Hello Wolrd !</h1>");
+/* export const testSecondRoute = async (req, res) => {
+  res.send("Hello second Wolrd !");
 };
+ */

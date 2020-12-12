@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
 
-router.use("/", require("./test.route"));
+router.use("/test", require("./test.route"));
 
 module.exports = router;
