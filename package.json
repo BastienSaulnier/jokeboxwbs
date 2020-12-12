@@ -4,8 +4,11 @@
   "description": "A backend to rule them all.",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main"
   },
   "repository": {
     "type": "git",
@@ -25,5 +28,8 @@
   },
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "engines": {
+    "node": "12.19.0"
   }
 }
