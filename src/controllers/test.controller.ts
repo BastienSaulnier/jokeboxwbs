@@ -2,7 +2,9 @@
  * Test comment
  */
 export const testRoute = (req, res) => {
-  res.send("coucou");
+  const origin = req.headers.origin;
+  const host = req.headers.host;
+  res.send(`requete venant de ${origin} et répondue par ${host}`);
 };
 
 /**
