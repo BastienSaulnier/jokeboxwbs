@@ -9,7 +9,7 @@
     "postinstall": "tsc",
     "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -w",
-    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+    "deploy": "git add . && git commit -m Heroku Deploy && git push heroku master"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,14 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "colors": "^1.4.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
-    "morgan": "^1.10.0"
+    "jwt-simple": "^0.5.6",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1"
   },
   "engines": {
     "node": "12.19.0"
