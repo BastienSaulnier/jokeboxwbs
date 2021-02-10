@@ -40,25 +40,6 @@ export const token = (req, res, next) => {
     const bearerToken = bearer[1];
 
     res.set("token", bearerToken);
-    // try {
-    //   const tokenData = jwt.decode(bearerToken, process.env.SECRET_TOKEN || "");
-
-    //   const callback = {
-    //     id_user: tokenData.id_user,
-    //     type: "application",
-    //     expiration: moment().format("X") + 20000,
-    //     latitude: tokenData.latitude,
-    //     longitude: tokenData.longitude,
-    //     name_location: tokenData.name_location,
-    //     firstname: tokenData.firstname,
-    //   };
-    //   const token = jwt.encode(callback, process.env.SECRET_TOKEN || "");
-
-    // res.set("token", token);
-
-    // } catch (e) {
-    //   // Error
-    // }
     next();
   } else {
     next();
