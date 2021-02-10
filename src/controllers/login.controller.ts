@@ -8,7 +8,6 @@ import {
  * Login controller
  */
 export const loginController = async (req, res) => {
-  console.log(req.body);
   const { email, password } = req.body.values;
   const user: any = await getUserByEmailModel({ email });
 
